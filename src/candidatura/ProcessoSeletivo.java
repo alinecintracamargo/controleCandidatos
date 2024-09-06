@@ -2,12 +2,31 @@ package candidatura;
 import java.util.concurrent.ThreadLocalRandom;
 public class ProcessoSeletivo {
 	public static void main(String[] args) {
-		selacaoCandidatos();
+		imprimirSelecionados();
 
 	}
+
+	static void imprimirSelecionados(){
+		String [] candidatos = {"Felipe", "Marcia", "Julia", "Paulo", "Augusto"};
+		
+		System.out.println("Imprimindo a lista de candidatos informando o indice do elemento");
+		
+		for (int indice=0; indice < candidatos.length;indice++) {
+			System.out.println("O candidato de n° " + (indice+1) + " é o " + candidatos[indice]);
+
+		}
+
+		System.out.println("Forma abreviada de interação for each ");
+
+		for(String candidato: candidatos) {
+			System.out.println("O candidato selecionado foi " + candidato);
+		}
+
+	}	
 	
 	static void selacaoCandidatos(){
 		String [] candidatos = {"Felipe", "Marcia", "Julia", "Paulo", "Augusto", "Monica", "Fabricio", "Mirela", "Daniela", "Jorge"};
+
 
 		int candidatosSelecionados = 0;
 		int candidatoAtual = 0;
